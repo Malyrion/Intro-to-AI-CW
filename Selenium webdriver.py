@@ -38,6 +38,11 @@ driver.find_element_by_xpath("//select[@id='sort']//option[@value='date']").clic
 # Click find job button
 driver.find_element_by_xpath("//*[@id='fj']").click()
 
+
+
+
 time.sleep(5000)
-driver.quit();
+driver.quit()
+
+
  
