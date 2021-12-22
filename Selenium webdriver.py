@@ -23,14 +23,14 @@ ratings=[]
 jobDescription=[]
 
 # Boolean for part time or not, 0 being part time 1 for full time after cleaning
-workingHours=[] 
+# workingHours=[] 
 jobLink=[] # seeing if longer job descriptions have salary
 
 # url loads 50 results of software jobs  
 # loop is used to step through the number of results, [50, 100, 150, etc]
 
-for i in range(0, 1):
-    url = 'https://uk.indeed.com/jobs?q=software%20engineer&limit=50&start'
+for i in range(0, 5):
+    url = 'https://uk.indeed.com/jobs?q=software%20engineer&limit=50&start='
     url += str(50*i)
     driver.get(url)
     
@@ -83,7 +83,7 @@ for i in range(0, 1):
 
         jobDescription.append(job.find_element_by_class_name('job-snippet').text)      
 
-res = pd.DataFrame({'Title': titles,'Company': companies, 'Links': jobLink, 'Working hours': workingHours, 'Ratings': ratings, 'Address': addresses, 'Salary': salaries, 'Job description': jobDescription})
+res = pd.DataFrame({'Title': titles,'Company': companies, 'Links': jobLink, 'Ratings': ratings, 'Address': addresses, 'Salary': salaries, 'Job description': jobDescription})
 print(res)
 res.to_csv('data.csv')
  
