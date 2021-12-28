@@ -30,6 +30,6 @@ def url_to_desc(x):
         return jobdesclong 
     except NoSuchElementException:
         return ""
- 
+        
 jobs['full-description'] = jobs['Links'].map(url_to_desc)
 jobs.to_csv('data.csv')

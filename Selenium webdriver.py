@@ -30,11 +30,17 @@ jobLink=[] # seeing if longer job descriptions have salary
 # url loads 50 results of software jobs  
 # loop is used to step through the number of results, [50, 100, 150, etc]
 
-for i in range(0, 10):
+for i in range(0, 50):
     url = 'https://uk.indeed.com/jobs?q=software%20engineer&limit=50&start='
     url += str(50*i)
     driver.get(url)
- 
+    if (i == 1):
+        try:
+            tapLoaded = EC.presence_of_element_located((By.CLASS_NAME, 'tapItem'))
+            WebDriverWait(driver, 3).until(tapLoaded)
+        except TimeoutException:
+            print('test')
+    
     try:
         tapLoaded = EC.presence_of_element_located((By.CLASS_NAME, 'tapItem'))
         WebDriverWait(driver, 3).until(tapLoaded)
