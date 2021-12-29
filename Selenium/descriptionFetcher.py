@@ -6,7 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 import pandas as pd 
 # Chrome driver path that is needed for Selenium
-PATH = r'D:\Python\chromedriver_win32\chromedriver.exe'
+PATH = r'C:\Users\maksy\Downloads\chromedriver_win32 (2)\chromedriver.exe'
 driver = webdriver.Chrome(PATH)
 
 jobs = pd.read_csv('data.csv')

@@ -9,7 +9,7 @@ import pandas as pd
 import numpy as np 
 
 # Chrome driver path that is needed for Selenium
-PATH = r'D:\Python\chromedriver_win32\chromedriver.exe'
+PATH = r'C:\Users\maksy\Downloads\chromedriver_win32\chromedriver.exe'
 driver = webdriver.Chrome(PATH)
 
 # Results page for software engineer jobs, that are also remote 
